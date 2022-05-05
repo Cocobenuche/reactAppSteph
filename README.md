@@ -1,2 +1,2 @@
-# reactAppSteph
+# Small-react-apps
 Created with CodeSandbox
