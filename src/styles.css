@@ -6,3 +6,13 @@
 .appTitle {
   text-align: center;
 }
+.elementDeChaqueDpts {
+  display: flex;
+  align-items: space-around;
+}
+.codes {
+  margin-left: 1%;
+}
+.codeRegions {
+  margin-left: 10px;
+}

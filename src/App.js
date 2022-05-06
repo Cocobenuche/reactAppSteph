@@ -17,7 +17,7 @@ export default function App() {
   return (
     <div className="App">
       <h1 className="appTitle">App of Small Apps</h1>
-      <p>Ceci est le site de Cocobenuche.</p>
+      <p>Ceci est le site de Corentin.</p>
 
       <Chip
         icon={<HomeIcon />}
@@ -31,7 +31,7 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/shopping-list" element={<ShoppingList />} />
           <Route path="/connection" element={<Connection />} />
-          <Route path="/list-department" element={<ListDepartments />} />
+          <Route path="/list-departments" element={<ListDepartments />} />
         </Routes>
       </Box>
     </div>
