@@ -11,21 +11,15 @@ class ListDepartments extends React.Component {
       .then((dataDepartment) => dataDepartment.json())
       .then((dataDepartment) => this.setState({ data: dataDepartment }));
   }
+
   render() {
     if (this.state.data.length === 0) {
       return "Loading...";
     }
-
-    const listNomsDpts = this.state.data.map((departement) => (
-      <li>{departement.nom}</li>
-    ));
-    const listCodesDpts = this.state.data.map((departement) => (
-      <li>{departement.code}</li>
-    ));
-    const listCodesRegionsDpts = this.state.data.map((departement) => (
-      <li>{departement.codeRegion}</li>
-    ));
-    const listDpts = this.state.data.map((departement) => (
+    const filteredDepartments = this.state.data.filter(
+      (dep) => dep.nom.indexOf(this.state.value) !== -1
+    );
+    const listDpts = filteredDepartments.map((departement) => (
       <li className="elementDeChaqueDpts">
         <span className="noms">{departement.nom} </span>
         <span className="codes">({departement.code})</span>
@@ -34,12 +28,11 @@ class ListDepartments extends React.Component {
     ));
     return (
       <div className="Resultat">
-        <form className="Recherche">
+        <form>
           <label>
             Recherche :
-            <input type="text" name="name" />
+            <input type="text" name="name" value={this.state.data.nom} />
           </label>
-          <input type="submit" value="Filtrer" />
         </form>
         <div className="Retour">
           <h4>Liste des départements</h4>
