@@ -3,6 +3,8 @@ import ShoppingList from "./ShoppingList";
 import Connection from "./Connection";
 import Home from "./Home";
 import ListDepartments from "./ListDepartments";
+import MovieDatabase from "./MovieDatabase";
+import MovieGenres from "./MovieGenres";
 import { Routes, Route, useNavigate } from "react-router-dom";
 import HomeIcon from "@mui/icons-material/Home";
 import { Chip, Box } from "@mui/material";
@@ -17,7 +19,7 @@ export default function App() {
   return (
     <div className="App">
       <h1 className="appTitle">App of Small Apps</h1>
-      <h5>Ceci est le site de Corentin.</h5>
+      <h5>Ceci est le site de Corentin B.</h5>
 
       <Chip
         icon={<HomeIcon />}
@@ -32,6 +34,8 @@ export default function App() {
           <Route path="/shopping-list" element={<ShoppingList />} />
           <Route path="/connection" element={<Connection />} />
           <Route path="/list-departments" element={<ListDepartments />} />
+          <Route path="/moviedatabase" element={<MovieDatabase />} />
+          <Route path="/moviegenres" element={<MovieGenres />} />
         </Routes>
       </Box>
     </div>

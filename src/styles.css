@@ -30,3 +30,9 @@ button {
 input {
   margin-left: 1%;
 }
+.elementDeChaqueGenre {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  background-color: rgb(210, 210, 210);
+  font-family: sans-serif;
+}
