@@ -3,6 +3,7 @@ import ShoppingList from "./ShoppingList";
 import Connection from "./Connection";
 import Home from "./Home";
 import ListDepartments from "./ListDepartments";
+import MovieDatabase from "./MovieDatabase";
 import { Routes, Route, useNavigate } from "react-router-dom";
 import HomeIcon from "@mui/icons-material/Home";
 import { Chip, Box } from "@mui/material";
@@ -32,6 +33,7 @@ export default function App() {
           <Route path="/shopping-list" element={<ShoppingList />} />
           <Route path="/connection" element={<Connection />} />
           <Route path="/list-departments" element={<ListDepartments />} />
+          <Route path="/movie-database" element={<MovieDatabase />} />
         </Routes>
       </Box>
     </div>
