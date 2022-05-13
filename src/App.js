@@ -5,6 +5,8 @@ import Home from "./Home";
 import ListDepartments from "./ListDepartments";
 import MovieDatabase from "./MovieDatabase";
 import MovieGenres from "./MovieGenres";
+import MeteoNantes from "./MeteoNantes";
+import Meteo from "./Meteo";
 import { Routes, Route, useNavigate } from "react-router-dom";
 import HomeIcon from "@mui/icons-material/Home";
 import { Chip, Box } from "@mui/material";
@@ -36,6 +38,8 @@ export default function App() {
           <Route path="/list-departments" element={<ListDepartments />} />
           <Route path="/moviedatabase" element={<MovieDatabase />} />
           <Route path="/moviegenres" element={<MovieGenres />} />
+          <Route path="/meteonantes" element={<MeteoNantes />} />
+          <Route path="/meteo" element={<Meteo />} />
         </Routes>
       </Box>
     </div>

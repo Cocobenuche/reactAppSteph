@@ -10,6 +10,8 @@ class Home extends React.Component {
         <Link to="/connection">Connection</Link>
         <Link to="/list-departments">Liste des départements</Link>
         <Link to="/moviegenres">Liste des genres</Link>
+        <Link to="/meteonantes">Météo selon la ville</Link>
+        <Link to="/meteo">Météo</Link>
       </Box>
     );
   }
