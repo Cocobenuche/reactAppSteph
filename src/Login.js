@@ -6,13 +6,21 @@ class Login extends React.Component {
 
     this.state = {
       email: "",
-      password: ""
+      password: "",
+      errPassword: false,
+      errEmail : false
     };
 
     this.handleChangeInput = this.handleChangeInput.bind(this);
   }
 
   handleChangeInput(e) {
+    const { name, value } = e.target;
+    this.setState({
+      [name]: value
+    });
+  }
+  handleChangeInputPassWord(e) {
     const { name, value } = e.target;
     this.setState({
       [name]: value
@@ -41,7 +49,7 @@ class Login extends React.Component {
               id="password"
               type="text"
               name="password"
-              onChange={this.handleChangeInput}
+              onChange={this.handleChangeInputPassword}
             />
           </div>
         </form>
